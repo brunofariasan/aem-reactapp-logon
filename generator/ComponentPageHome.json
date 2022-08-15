@@ -1,0 +1,87 @@
+{
+    "project-settings": {
+      "code-owner": "React App",
+      "bundle-path": "../core/src/main/java",
+      "test-path": "../core/src/test/java",
+      "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+      "component-path": "reactapp",
+      "model-interface-pkg": "com.reactapp.core.models",
+      "model-impl-pkg": "com.reactapp.core.models.impl"
+    },
+    "name": "meucomponentehome",
+    "title": "Componente Body",
+    "group": "React App - Content",
+    "type": "components",
+    "options": {
+      "js": false,
+      "jstxt": false,
+      "css": false,
+      "csstxt": false,
+      "html": false,
+      "html-content": false,
+      "slingmodel": true,
+      "testclass": false,
+      "junit-major-version": 5,
+      "content-exporter": true,
+      "model-adaptables": [
+        "request"
+      ],
+      "generic-javadoc": false,
+      "properties": [
+        
+        {
+          "field": "titleRedOne",
+          "type": "textfield",
+          "label": "Texto vermelho inicio.",
+          "json-expose": true
+        },
+        {
+          "field": "titleRedTwo",
+          "type": "textfield",
+          "label": "Texto vermelho centro.",
+          "json-expose": true
+          
+        },
+        {
+          "field": "titleRedThree",
+          "type": "textfield",
+          "label": "Texto vermelho centro.",
+          "json-expose": true
+          
+        },
+        {
+          "field": "titleRedFour",
+          "type": "textfield",
+          "label": "Texto vermelho final.",
+          "json-expose": true
+        },
+        {
+          "field": "titleBlackOne",
+          "type": "textfield",
+          "label": "Texto preto inicio.",
+          "json-expose": true
+          
+        },
+        {
+          "field": "titleBlackTwo",
+          "type": "textfield",
+          "label": "Texto preto centro.",
+          "json-expose": true
+          
+        },       {
+          "field": "titleBlackThree",
+          "type": "textfield",
+          "label": "Texto preto centro.",
+          "json-expose": true
+          
+        },
+        {
+          "field": "titleBlackFour",
+          "type": "textfield",
+          "label": "Texto preto final.",
+          "json-expose": true
+          
+        }
+      ]
+    }
+  }

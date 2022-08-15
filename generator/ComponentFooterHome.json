@@ -1,0 +1,54 @@
+{
+    "project-settings": {
+      "code-owner": "React App",
+      "bundle-path": "../core/src/main/java",
+      "test-path": "../core/src/test/java",
+      "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+      "component-path": "reactapp",
+      "model-interface-pkg": "com.reactapp.core.models",
+      "model-impl-pkg": "com.reactapp.core.models.impl"
+    },
+    "name": "meucomponentefooter",
+    "title": "Componente Footer",
+    "group": "React App - Content",
+    "type": "components",
+    "options": {
+      "js": false,
+      "jstxt": false,
+      "css": false,
+      "csstxt": false,
+      "html": false,
+      "html-content": false,
+      "slingmodel": true,
+      "testclass": false,
+      "junit-major-version": 5,
+      "content-exporter": true,
+      "model-adaptables": [
+        "request"
+      ],
+      "generic-javadoc": false,
+      "properties": [
+        
+        {
+          "field": "textInfo",
+          "type": "textarea",
+          "label": "Texto informativo.",
+          "json-expose": true
+        },
+        {
+          "field": "textRefresh",
+          "type": "textarea",
+          "label": "Texto ao lado do cronometro.",
+          "json-expose": true
+          
+        },
+        {
+          "field": "textSeconds",
+          "type": "textfield",
+          "label": "Texto embaixo do cronometro.",
+          "json-expose": true
+          
+        }
+      ]
+    }
+  }
