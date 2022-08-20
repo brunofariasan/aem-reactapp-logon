@@ -184,6 +184,9 @@ export const SecondTitle2 = styled.p `
     font-size: clamp(0.1em, 0.5em + 0.9vw, 4.5em);
     color: #222222;
 
+    @media screen and (max-width: 1232px){
+        margin: 2% 0 0 0;
+    }
 `;
 
 export const SecondTitle3 = styled.p `
@@ -193,6 +196,10 @@ export const SecondTitle3 = styled.p `
     line-height: 12px;
     font-size: clamp(0.1em, 0.5em + 0.9vw, 4.5em);
     color: #222222;
+
+    @media screen and (max-width: 1414px){
+        margin: 2% 0 0 0;
+    }
 
 `;
 
@@ -226,7 +233,6 @@ export const BigText2 = styled.h1 `
     height: 77px;
     font-size: clamp(0.1em, 0.5em + 2.9vw, 6.5em);
     color: #C12D18;
-
 `;
 
 

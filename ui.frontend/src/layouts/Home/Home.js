@@ -1,13 +1,15 @@
-import {  Body, Main, Section, SectionLogo, TextsSection, TextsMargin, MediumText, SecondTitle, SecondTitle1, SecondTitle2, SecondTitle3, BigText, BigText1, BigText2, DivTex, DivText
-        } from './styles'
-import logo from '../../assets/uol-ball-transparent 1.png'
-import './style.css';
-import './style.css';
 import PropTypes from "prop-types";
+import { MapTo } from "@adobe/aem-react-editable-components";
+import React from "react";
+import logo from '../../assets/uol-ball-transparent 1.png'
+import {  Body, Main, Section, SectionLogo, TextsSection, TextsMargin, MediumText, SecondTitle, SecondTitle1, SecondTitle2, SecondTitle3, BigText, BigText1, BigText2, DivTex, DivText
+} from './styles'
+
+import './style.css';
 
 //import { useNavigate  } from 'react-router-dom';
 
-const Home = ({titleRedOne, titleRedTwo, titleRedThree, titleRedFour, titleBlackOne, titleBlackTwo, titleBlackThree, titleBlackFour}) => {
+const Home = ({fielddOne, fielddTwo, fielddThree, fielddFour}) => {
 
   return (
     <Body>
@@ -18,74 +20,90 @@ const Home = ({titleRedOne, titleRedTwo, titleRedThree, titleRedFour, titleBlack
           </SectionLogo>
           <TextsSection>
             <TextsMargin>
-
-              <DivTex>
-                <MediumText>
-                  {titleRedOne}
-                </MediumText>
-                <SecondTitle>
-                  {titleBlackOne}
-                </SecondTitle>
-              </DivTex>
-
-              <DivText>
-                <BigText> 
-                  {titleRedTwo}
-                </BigText>
-                <SecondTitle1>
-                  {titleBlackTwo}
-                </SecondTitle1>
-              </DivText>
-
-              <DivText>
-                <BigText1> 
-                  {titleRedThree}
-                </BigText1>
-                <SecondTitle2>
-                  {titleBlackThree}
-                </SecondTitle2>
-              </DivText>
-              
-              <div>
-                <BigText2>
-                  {titleRedFour} 
-                </BigText2>
-                <SecondTitle3>
-                  {titleBlackFour}
-                </SecondTitle3>
-              </div>
+              {fielddOne.map(({titleRedOne, titleBlackOne}, index) => (
+                <DivTex key={index}>
+                  <MediumText>
+                    {titleRedOne}
+                  </MediumText>
+                  <SecondTitle>
+                    {titleBlackOne}
+                  </SecondTitle>
+                </DivTex>
+              ))}
+              {fielddTwo.map(({titleRedTwo, titleBlackTwo}, index) => (
+                <DivText key={index}>
+                  <BigText> 
+                    {titleRedTwo}
+                  </BigText>
+                  <SecondTitle1>
+                    {titleBlackTwo}
+                  </SecondTitle1>
+                </DivText>
+              ))}
+              {fielddThree.map(({titleRedThree, titleBlackThree}, index) => (
+                <DivText key={index}>
+                  <BigText1> 
+                    {titleRedThree}
+                  </BigText1>
+                  <SecondTitle2>
+                    {titleBlackThree}
+                  </SecondTitle2>
+                </DivText>
+              ))}
+              {fielddFour.map(({titleRedFour, titleBlackFour}, index) => (
+                <div key={index}>
+                  <BigText2>
+                    {titleRedFour} 
+                  </BigText2>
+                  <SecondTitle3>
+                    {titleBlackFour}
+                  </SecondTitle3>
+                </div>
+              ))}
             </TextsMargin>
           </TextsSection>
         </Section>
       </Main>
-    </Body>
+ </Body>
   );
  }  
  Home.prototype = {
   titleRedOne: PropTypes.string,
-  titleRedTwo: PropTypes.string,
-  titleRedThree: PropTypes.string,
-  titleRedFour: PropTypes.string,
-  titleBlackOne: PropTypes.string,
-  titleBlackTwo: PropTypes.string,
-  titleBlackThree: PropTypes.string,
-  titleBlackFour: PropTypes.string
+  titleBlackOne: PropTypes.string
+
 
 
 };
 
 Home.defaultProps = {
-  titleRedOne: "Our mission is",
-  titleRedTwo: "to transform the world",
-  titleRedThree: "building digital experiences ",
-  titleRedFour: "that enable our clients growth",
-  titleBlackOne: "Nossa missão é",
-  titleBlackTwo: "transformar o mundo",
-  titleBlackThree: "construindo experiências digitais",
-  titleBlackFour: "que permitam o crescimento dos nossos clientes"
+  fielddOne: [
+    {
+      titleRedOne: "Our mission is",
+      titleBlackOne: "Nossa missão é"
+    }
+  ],
+  fielddTwo: [
+    {
+      titleRedTwo: "to transform the world",
+      titleBlackTwo: "transformar o mundo"
+    }
+  ],
+  fielddThree: [
+    {
+      titleRedThree: "building digital experiences ",
+      titleBlackThree: "construindo experiências digitais"
+    }
+  ],
+  fielddFour: [
+    {
+      titleRedFour: "that enable our clients growth",
+      titleBlackFour: "que permitam o crescimento dos nossos clientes"
+    }
+  ]
 
- 
 
 };
-  
-export default Home;
+
+export default MapTo("reactapp/components/tabs-body-home")(Home);
+
+

@@ -24,6 +24,7 @@ html, body {
     font-size: 100%;
     margin: 0;
     padding: 0;
+    top: 0;
     vertical-align: baseline;
     
 }
@@ -31,7 +32,7 @@ html, body {
 body {
     background-color: #E5E5E5;
     padding: 0 !important;
-    height: 88vh;
+    height: 100vh;
 
     
 }
@@ -46,4 +47,12 @@ p,
 .rw-box {
     font-family: 'Poppins';
  
+}
+
+.new {
+    height: 0;
+}
+
+.cq-placeholder {
+    height: 0rem;
 }

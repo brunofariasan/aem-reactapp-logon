@@ -18,54 +18,63 @@
 
 package com.reactapp.core.models.impl;
 
+import java.util.Collections;
+import java.util.List;
+import com.adobe.acs.commons.models.injectors.annotation.ChildResourceFromRequest;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.Meucomponente;
+import com.reactapp.core.models.TabsBodyHome;
+import com.reactapp.core.models.multifielddFourModel;
+import com.reactapp.core.models.multifielddOneModel;
+import com.reactapp.core.models.multifielddThreeModel;
+import com.reactapp.core.models.multifielddTwoModel;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
-import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    Meucomponente.class,
+    TabsBodyHome.class,
     ComponentExporter.class
-}, resourceType = "aem-reactapp-login/components/meucomponente")
+}, resourceType = "reactapp/components/tabs-body-home")
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class MeucomponenteImpl
-    implements Meucomponente
+public class TabsBodyHomeImpl
+    implements TabsBodyHome
 {
 
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String titleCenter;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String textOne;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String textButton;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<multifielddOneModel> fielddOne;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<multifielddTwoModel> fielddTwo;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<multifielddThreeModel> fielddThree;
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private List<multifielddFourModel> fielddFour;
     @SlingObject
     private Resource resource;
 
     @Override
-    @JsonProperty("titleCenter")
-    public String getTitleCenter() {
-        return titleCenter;
+    public List<multifielddOneModel> getFielddOne() {
+        return fielddOne != null ? Collections.unmodifiableList(fielddOne) : null;
     }
 
     @Override
-    @JsonProperty("textOne")
-    public String getTextOne() {
-        return textOne;
+    public List<multifielddTwoModel> getFielddTwo() {
+        return fielddTwo != null ? Collections.unmodifiableList(fielddTwo) : null;
     }
 
     @Override
-    @JsonProperty("textButton")
-    public String getTextButton() {
-        return textButton;
+    public List<multifielddThreeModel> getFielddThree() {
+        return fielddThree != null ? Collections.unmodifiableList(fielddThree) : null;
+    }
+
+    @Override
+    public List<multifielddFourModel> getFielddFour() {
+        return fielddFour != null ? Collections.unmodifiableList(fielddFour) : null;
     }
 
     @Override

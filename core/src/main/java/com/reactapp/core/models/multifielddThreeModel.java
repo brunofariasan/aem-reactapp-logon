@@ -19,22 +19,24 @@
 package com.reactapp.core.models;
 
 import com.adobe.cq.export.json.ComponentExporter;
-import com.adobe.cq.wcm.core.components.models.Image;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code Meucomponenteheader} Sling Model used for the {@code reactapp/components/meucomponenteheader} component.
+ * Defines the {@code multifielddThreeModel} Sling Model used for the multifield in {@code reactapp/components/tabs-body-home} component.
  * 
  */
 @ConsumerType
-public interface Meucomponenteheader
+public interface multifielddThreeModel
     extends ComponentExporter
 {
 
 
-    @JsonProperty("image")
-    Image getImage();
+    @JsonProperty("titleRedThree")
+    String getTitleRedThree();
+
+    @JsonProperty("titleBlackThree")
+    String getTitleBlackThree();
 
 }

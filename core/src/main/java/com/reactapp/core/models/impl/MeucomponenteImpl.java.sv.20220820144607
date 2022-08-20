@@ -20,7 +20,6 @@ package com.reactapp.core.models.impl;
 
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.reactapp.core.models.Meucomponente;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
@@ -51,19 +50,16 @@ public class MeucomponenteImpl
     private Resource resource;
 
     @Override
-    @JsonProperty("titleCenter")
     public String getTitleCenter() {
         return titleCenter;
     }
 
     @Override
-    @JsonProperty("textOne")
     public String getTextOne() {
         return textOne;
     }
 
     @Override
-    @JsonProperty("textButton")
     public String getTextButton() {
         return textButton;
     }

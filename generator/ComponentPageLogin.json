@@ -32,20 +32,25 @@
         "field": "titleCenter",
         "type": "textfield",
         "label": "Digite um texto aqui por favor.",
-        "json-expose": true
+        "json-expose": true,
+        "json-property": "titleCenter"
       },
       {
         "field": "textOne",
         "type": "textarea",
         "label": "Digite um texto aqui por favor.",
-        "json-expose": true
+        "json-expose": true,
+        "json-property": "textOne"
+        
         
       },
       {
         "field": "textButton",
         "type": "textfield",
         "label": "Digite um texto aqui por favor.",
-        "json-expose": true
+        "json-expose": true,
+        "json-property": "textButton"
+
         
       }
     ]

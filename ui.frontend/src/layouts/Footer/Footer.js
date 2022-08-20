@@ -4,6 +4,7 @@ import { StopwatchSection, Footer, SectionFooter, TextoFooter, LineDiv,
 import {ButtonRenew, ButtonLogout, ButtonRenewMobile} from '../../components/Form/style.button'
 import PropTypes from "prop-types";
 import { useHistory } from "react-router-dom";
+import './styles.css';
 
 const Footerr = ({textInfo, textRefresh, textSeconds}) => {
 let history = useHistory();

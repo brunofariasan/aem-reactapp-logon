@@ -19,8 +19,6 @@
 package com.reactapp.core.models;
 
 import com.adobe.cq.export.json.ComponentExporter;
-import com.adobe.cq.wcm.core.components.models.Image;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.osgi.annotation.versioning.ConsumerType;
 
 
@@ -33,8 +31,5 @@ public interface Meucomponenteheader
     extends ComponentExporter
 {
 
-
-    @JsonProperty("image")
-    Image getImage();
 
 }

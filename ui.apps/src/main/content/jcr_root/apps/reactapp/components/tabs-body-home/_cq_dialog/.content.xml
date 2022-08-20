@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ |  ***********************************************************************
+ |  React App CONFIDENTIAL
+ |  ___________________
+ |
+ |  Copyright 2022 React App
+ |  All Rights Reserved.
+ |
+ |  NOTICE:  All information contained herein is, and remains the property
+ |  of React App and its suppliers, if any. The intellectual and
+ |  technical concepts contained herein are proprietary to React App
+ |  and its suppliers and are protected by trade secret or copyright law.
+ |  Dissemination of this information or reproduction of this material
+ |  is strictly forbidden unless prior written permission is obtained
+ |  from React App.
+ |  ***********************************************************************
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Multifields Body"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+   <content jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+      <items jcr:primaryType="nt:unstructured">
+         <tabs jcr:primaryType="nt:unstructured"
+               sling:resourceType="granite/ui/components/coral/foundation/tabs">
+            <items jcr:primaryType="nt:unstructured">
+               <tab-one jcr:primaryType="nt:unstructured"
+                        jcr:title="Primeira seção"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <fielddOne composite="{Boolean}true"
+                                      fieldLabel="First Multifield"
+                                      jcr:primaryType="nt:unstructured"
+                                      sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                              <field cq-msm-lockable="./fielddOne"
+                                     jcr:primaryType="nt:unstructured"
+                                     name="./fielddOne"
+                                     sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                 <items jcr:primaryType="nt:unstructured">
+                                    <titleRedOne fieldLabel="Texto vermelho primeira seção."
+                                                 jcr:primaryType="nt:unstructured"
+                                                 name="./titleRedOne"
+                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <titleBlackOne fieldLabel="Texto preto primeira seção."
+                                                   jcr:primaryType="nt:unstructured"
+                                                   name="./titleBlackOne"
+                                                   sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                 </items>
+                              </field>
+                           </fielddOne>
+                        </items>
+                     </column>
+                  </items>
+               </tab-one>
+               <tab-two jcr:primaryType="nt:unstructured"
+                        jcr:title="Segunda seção"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <fielddTwo composite="{Boolean}true"
+                                      fieldLabel="Second Multifield"
+                                      jcr:primaryType="nt:unstructured"
+                                      sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                              <field cq-msm-lockable="./fielddTwo"
+                                     jcr:primaryType="nt:unstructured"
+                                     name="./fielddTwo"
+                                     sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                 <items jcr:primaryType="nt:unstructured">
+                                    <titleRedTwo fieldLabel="Texto vermelho segunda seção."
+                                                 jcr:primaryType="nt:unstructured"
+                                                 name="./titleRedTwo"
+                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <titleBlackTwo fieldLabel="Texto preto segunda seção."
+                                                   jcr:primaryType="nt:unstructured"
+                                                   name="./titleBlackTwo"
+                                                   sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                 </items>
+                              </field>
+                           </fielddTwo>
+                        </items>
+                     </column>
+                  </items>
+               </tab-two>
+               <tab-three jcr:primaryType="nt:unstructured"
+                          jcr:title="Terceira seção"
+                          sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <fielddThree composite="{Boolean}true"
+                                        fieldLabel="Second Multifield"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                              <field cq-msm-lockable="./fielddThree"
+                                     jcr:primaryType="nt:unstructured"
+                                     name="./fielddThree"
+                                     sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                 <items jcr:primaryType="nt:unstructured">
+                                    <titleRedThree fieldLabel="Texto vermelho terceira seção."
+                                                   jcr:primaryType="nt:unstructured"
+                                                   name="./titleRedThree"
+                                                   sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <titleBlackThree fieldLabel="Texto preto terceira seção."
+                                                     jcr:primaryType="nt:unstructured"
+                                                     name="./titleBlackThree"
+                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                 </items>
+                              </field>
+                           </fielddThree>
+                        </items>
+                     </column>
+                  </items>
+               </tab-three>
+               <tab-four jcr:primaryType="nt:unstructured"
+                         jcr:title="Quarta seção"
+                         sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <fielddFour composite="{Boolean}true"
+                                       fieldLabel="Second Multifield"
+                                       jcr:primaryType="nt:unstructured"
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                              <field cq-msm-lockable="./fielddFour"
+                                     jcr:primaryType="nt:unstructured"
+                                     name="./fielddFour"
+                                     sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                 <items jcr:primaryType="nt:unstructured">
+                                    <titleRedFour fieldLabel="Texto vermelho quarta seção."
+                                                  jcr:primaryType="nt:unstructured"
+                                                  name="./titleRedFour"
+                                                  sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                    <titleBlackFour fieldLabel="Texto preto quarta seção."
+                                                    jcr:primaryType="nt:unstructured"
+                                                    name="./titleBlackFour"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                 </items>
+                              </field>
+                           </fielddFour>
+                        </items>
+                     </column>
+                  </items>
+               </tab-four>
+            </items>
+         </tabs>
+      </items>
+   </content>
+</jcr:root>

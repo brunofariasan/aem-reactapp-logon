@@ -3,6 +3,7 @@ import {  HeaderSection, SmallLogo } from './styles'
 
 const ImageModel = ({ image = {}}) => {
     return(
+        
         <HeaderSection>        
             <SmallLogo>
                 <img id="imgBlack" src={image.src}/>

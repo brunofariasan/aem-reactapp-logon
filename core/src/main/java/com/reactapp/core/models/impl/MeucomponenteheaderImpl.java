@@ -18,13 +18,17 @@
 
 package com.reactapp.core.models.impl;
 
+import com.adobe.acs.commons.models.injectors.annotation.ChildResourceFromRequest;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
+import com.adobe.cq.wcm.core.components.models.Image;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.reactapp.core.models.Meucomponenteheader;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 
 @Model(adaptables = {
@@ -38,8 +42,16 @@ public class MeucomponenteheaderImpl
     implements Meucomponenteheader
 {
 
+    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private Image image;
     @SlingObject
     private Resource resource;
+
+    @Override
+    @JsonProperty("image")
+    public Image getImage() {
+        return image;
+    }
 
     @Override
     public String getExportedType() {

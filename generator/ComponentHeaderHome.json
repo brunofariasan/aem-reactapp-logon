@@ -28,7 +28,13 @@
       ],
       "generic-javadoc": false,
       "properties": [
-        
+        {
+          "field": "image",
+          "type": "image",
+          "label": "Imagem",
+          "json-expose": true,
+          "json-property": "image"
+        }
       ]
     }
   }

@@ -1,87 +1,150 @@
 {
-    "project-settings": {
-      "code-owner": "React App",
-      "bundle-path": "../core/src/main/java",
-      "test-path": "../core/src/test/java",
-      "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
-      "component-path": "reactapp",
-      "model-interface-pkg": "com.reactapp.core.models",
-      "model-impl-pkg": "com.reactapp.core.models.impl"
-    },
-    "name": "meucomponentehome",
-    "title": "Componente Body",
-    "group": "React App - Content",
-    "type": "components",
-    "options": {
-      "js": false,
-      "jstxt": false,
-      "css": false,
-      "csstxt": false,
-      "html": false,
-      "html-content": false,
-      "slingmodel": true,
-      "testclass": false,
-      "junit-major-version": 5,
-      "content-exporter": true,
-      "model-adaptables": [
-        "request"
-      ],
-      "generic-javadoc": false,
-      "properties": [
-        
-        {
-          "field": "titleRedOne",
-          "type": "textfield",
-          "label": "Texto vermelho inicio.",
-          "json-expose": true
-        },
-        {
-          "field": "titleRedTwo",
-          "type": "textfield",
-          "label": "Texto vermelho centro.",
-          "json-expose": true
-          
-        },
-        {
-          "field": "titleRedThree",
-          "type": "textfield",
-          "label": "Texto vermelho centro.",
-          "json-expose": true
-          
-        },
-        {
-          "field": "titleRedFour",
-          "type": "textfield",
-          "label": "Texto vermelho final.",
-          "json-expose": true
-        },
-        {
-          "field": "titleBlackOne",
-          "type": "textfield",
-          "label": "Texto preto inicio.",
-          "json-expose": true
-          
-        },
-        {
-          "field": "titleBlackTwo",
-          "type": "textfield",
-          "label": "Texto preto centro.",
-          "json-expose": true
-          
-        },       {
-          "field": "titleBlackThree",
-          "type": "textfield",
-          "label": "Texto preto centro.",
-          "json-expose": true
-          
-        },
-        {
-          "field": "titleBlackFour",
-          "type": "textfield",
-          "label": "Texto preto final.",
-          "json-expose": true
-          
+  "project-settings": {
+    "code-owner": "React App",
+    "bundle-path": "../core/src/main/java",
+    "test-path": "../core/src/test/java",
+    "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+    "component-path": "reactapp",
+    "model-interface-pkg": "com.reactapp.core.models",
+    "model-impl-pkg": "com.reactapp.core.models.impl"
+  },
+
+  "name": "tabs-body-home",
+  "title": "Multifields Body",
+  "group": "React App - Content",
+  "type": "components",
+  "options": {
+    "js": false,
+    "jstxt": false,
+    "css": false,
+    "csstxt": false,
+    "html": false,
+    "html-content": false,
+    "slingmodel": true,
+    "testclass": false,
+    "junit-major-version": 5,
+    "content-exporter": true,
+    "model-adaptables": ["request"],
+    "generic-javadoc": false,
+    "properties-tabs": [
+      {
+        "id": "tab-one",
+        "label": "Primeira seção",
+        "fields": ["fielddOne"]
+      },
+      {
+        "id": "tab-two",
+        "label": "Segunda seção",
+        "fields": ["fielddTwo"]
+      },
+      {
+          "id": "tab-three",
+          "label": "Terceira seção",
+          "fields": ["fielddThree"]
+      },
+      {
+          "id": "tab-four",
+          "label": "Quarta seção",
+          "fields": ["fielddFour"]
         }
+    ],
+    "properties": [
+      {
+        "field": "fielddOne",
+        "type": "multifield",
+        "label": "First Multifield",
+        "model-name": "multifielddOneModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+              "field": "titleRedOne",
+              "type": "textfield",
+              "label": "Texto vermelho primeira seção.",
+              "json-expose": true,
+              "json-property": "titleRedOne"
+          },
+          {
+              "field": "titleBlackOne",
+              "type": "textfield",
+              "label": "Texto preto primeira seção.",
+              "json-expose": true,
+              "json-property": "titleBlackOne"
+          }
       ]
-    }
+      },
+      {
+        "field": "fielddTwo",
+        "type": "multifield",
+        "label": "Second Multifield",
+        "model-name": "multifielddTwoModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+              "field": "titleRedTwo",
+              "type": "textfield",
+              "label": "Texto vermelho segunda seção.",
+              "json-expose": true,
+              "json-property": "titleRedTwo"
+          },
+          {
+              "field": "titleBlackTwo",
+              "type": "textfield",
+              "label": "Texto preto segunda seção.",
+              "json-expose": true,
+              "json-property": "titleBlackTwo"
+          }
+        ]
+      },
+      {
+          "field": "fielddThree",
+          "type": "multifield",
+          "label": "Second Multifield",
+          "model-name": "multifielddThreeModel",
+          "use-existing-model": false,
+          "json-expose": true,
+          "items": [
+            {
+              "field": "titleRedThree",
+              "type": "textfield",
+              "label": "Texto vermelho terceira seção.",
+              "json-expose": true,
+              "json-property": "titleRedThree"
+            },
+            {
+              "field": "titleBlackThree",
+              "type": "textfield",
+              "label": "Texto preto terceira seção.",
+              "json-expose": true,
+              "json-property": "titleBlackThree"
+            }
+          ]
+      },
+      {
+          "field": "fielddFour",
+          "type": "multifield",
+          "label": "Second Multifield",
+          "model-name": "multifielddFourModel",
+          "use-existing-model": false,
+          "json-expose": true,
+          "items": [
+              {
+                  "field": "titleRedFour",
+                  "type": "textfield",
+                  "label": "Texto vermelho quarta seção.",
+                  "json-expose": true,
+                  "json-property": "titleRedFour"
+              },
+              {
+                  "field": "titleBlackFour",
+                  "type": "textfield",
+                  "label": "Texto preto quarta seção.",
+                  "json-expose": true,
+                  "json-property": "titleBlackFour"
+              }
+          ]
+      }
+    ]
   }
+}

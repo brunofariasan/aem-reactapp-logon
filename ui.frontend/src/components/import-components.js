@@ -173,7 +173,7 @@ MapTo('reactapp/components/react-main-container')(ReactMainContainer, {
 
 MapTo('reactapp/components/meucomponente')(ComponentPageE);
 
-MapTo('reactapp/components/meucomponentehome')(ComponentPageHo);
+MapTo('reactapp/components/tabs-body-home')(ComponentPageHo);
 
 MapTo('reactapp/components/meucomponentefooter')(ComponentPageFooter);
 

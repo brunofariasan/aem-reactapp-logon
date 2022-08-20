@@ -21,7 +21,7 @@ package com.reactapp.core.models.impl;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.Meucomponente;
+import com.reactapp.core.models.multifielddThreeModel;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -33,39 +33,31 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    Meucomponente.class,
+    multifielddThreeModel.class,
     ComponentExporter.class
-}, resourceType = "aem-reactapp-login/components/meucomponente")
+})
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class MeucomponenteImpl
-    implements Meucomponente
+public class multifielddThreeModelImpl
+    implements multifielddThreeModel
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String titleCenter;
+    private String titleRedThree;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String textOne;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String textButton;
+    private String titleBlackThree;
     @SlingObject
     private Resource resource;
 
     @Override
-    @JsonProperty("titleCenter")
-    public String getTitleCenter() {
-        return titleCenter;
+    @JsonProperty("titleRedThree")
+    public String getTitleRedThree() {
+        return titleRedThree;
     }
 
     @Override
-    @JsonProperty("textOne")
-    public String getTextOne() {
-        return textOne;
-    }
-
-    @Override
-    @JsonProperty("textButton")
-    public String getTextButton() {
-        return textButton;
+    @JsonProperty("titleBlackThree")
+    public String getTitleBlackThree() {
+        return titleBlackThree;
     }
 
     @Override

@@ -19,6 +19,7 @@
 package com.reactapp.core.models;
 
 import com.adobe.cq.export.json.ComponentExporter;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.osgi.annotation.versioning.ConsumerType;
 
 
@@ -32,10 +33,13 @@ public interface Meucomponente
 {
 
 
+    @JsonProperty("titleCenter")
     String getTitleCenter();
 
+    @JsonProperty("textOne")
     String getTextOne();
 
+    @JsonProperty("textButton")
     String getTextButton();
 
 }

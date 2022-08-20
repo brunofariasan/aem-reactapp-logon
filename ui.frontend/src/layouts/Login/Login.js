@@ -26,48 +26,49 @@ const Login = ( {titleCenter, textOne, textButton } ) => {
         
     }
  }
-  
   return (
+    <>
     <Body>
-        <DivFormat>
-            <DivInformation>
-                <Div>
-                    <form onSubmit={handleSubmit}>
-                        <DivFlexible>
-                            <DivTitle>
-                                <TextTitle>
-                                    <img class="imgLogoCompass" src={logoCompass} alt="logo"/>
-                                    {titleCenter}
-                                </TextTitle>
-                                <TextSubtitle>
-                                    {textOne}
-                                </TextSubtitle>
-                                <TextLogin>
-                                    Login
-                                </TextLogin>
-                            </DivTitle>    
-                            <DivInput>                         
-                                <Input id="user" type="username" placeholder="Usuário" name="username"  {...username}/>
-                            </DivInput>
-                            <DivInput>
-                                <Input id="lock"  placeholder="Senha" type="password" name="password" {...password}/>
-                            </DivInput>
-                            <Error>
-                            <P>{username.error || password.error}</P>
-                            </Error>
-                            <Button id="button-login" type='submit'>
-                                {textButton}
-                            </Button>
-                        </DivFlexible>
-                    </form>
-                </Div>
-            </DivInformation>
-        </DivFormat>      
-        <ImageLayout />
+    <DivFormat>
+        <DivInformation>
+            <Div>
+                <form onSubmit={handleSubmit}>
+                    <DivFlexible>
+                        <DivTitle>
+                            <TextTitle>
+                                <img class="imgLogoCompass" src={logoCompass} alt="logo"/>
+                                {titleCenter}
+                            </TextTitle>
+                            <TextSubtitle>
+                                {textOne}
+                            </TextSubtitle>
+                            <TextLogin>
+                                Login
+                            </TextLogin>
+                        </DivTitle>    
+                        <DivInput>                         
+                            <Input id="user" type="username" placeholder="Usuário" name="username"  {...username}/>
+                        </DivInput>
+                        <DivInput>
+                            <Input id="lock"  placeholder="Senha" type="password" name="password" {...password}/>
+                        </DivInput>
+                        <Error>
+                        <P>{username.error || password.error}</P>
+                        </Error>
+                        <Button id="button-login" type='submit'>
+                            {textButton}
+                        </Button>
+                    </DivFlexible>
+                </form>
+            </Div>
+        </DivInformation>
+    </DivFormat>        
+    <ImageLayout />
     </Body>
+    </>
   );
 }
-
+  
 Login.prototype = {
     titleCenter: PropTypes.string,
     textOne: PropTypes.string,

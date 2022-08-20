@@ -2,9 +2,7 @@ import styled from "styled-components"
 
 export const DivLogin = styled.div`
 
-    max-width: 1034px;
-    width: 961px;
-    height: 100%;
+
 
     img{
         max-width: 1030px;
@@ -12,7 +10,7 @@ export const DivLogin = styled.div`
     }
 
     @media (max-width: 768px) {
-        display: none;
+       
     }
 
     #imgLogoCompassOne{

@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const SmallLogo = styled.div `
     margin: 1% 0% 0% 0%;
-    background-color: #E5E5E5;
+    background-color: #26292C;
     
     #imgBlack {
         max-width: 100%;
